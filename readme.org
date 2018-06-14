@@ -1,0 +1,18 @@
+
+
+* pyqtilt
+
++ A fully fledged battery included modules/classes/members/functions inspector
++ Arguments and members are editable.
++ Functions can be called by double clicking them or by pressing enter.
++ Activating the __init__ method of a class does bring a new instance into the tree
++ since tuple are immutable editing a tuple copy then overwrites the previous one
++ The inspection will detect methods with invalid signatures,
+  so far, only initializer lacking a self parameter (written with the underscore sign in my book)
++ displayed value in the tree can be refreshed in realtime
+
+Todo :
+- trace changes
+
+* Requirements
+PyQt5
