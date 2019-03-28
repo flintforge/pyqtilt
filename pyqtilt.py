@@ -61,7 +61,7 @@ class PyqtiltWidget(QWidget):
         hbox.addWidget(splitter1)
 
         splitter1.addWidget(_.objtree)
-        splitter1.addWidget(seqView)
+        #splitter1.addWidget(seqView)
 
         _.globalistwid.show()
 
