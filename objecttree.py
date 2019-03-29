@@ -654,8 +654,6 @@ class TreeItem(QTreeWidgetItem):
     def setData(_,column, role, value):
         super().setData(column, role, value)
         _.treeWidget().itemChanged.emit(_.parent(),column)
-        print('sat')
-
 
 
 class BooleanItem(TreeItem):
