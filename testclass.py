@@ -1,3 +1,4 @@
+import threading
 
 class A:
     """docstring for ClassName"""
@@ -70,3 +71,11 @@ class TestClass:
 
     def x(_):
         return TestClass()
+
+    def run_inc(_) :
+        _.aninteger += 0.1
+        print(_.aninteger)
+        _.timer = threading.Timer(1.0, _.run_inc)
+
+    def stop(_):
+        _.timer.cancel()
