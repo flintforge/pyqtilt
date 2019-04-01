@@ -5,11 +5,11 @@ from inspect import isclass
 from PyQt5.QtWidgets import (
     QFrame, QWidget,QComboBox,QListWidget,QLabel, QListWidgetItem,QVBoxLayout
 )
-from PyQt5.QtCore import Qt #, pyqtWrapperType
+from PyQt5.QtCore import Qt # pyqtWrapperType (excluded in <Qt5.1)
 
 try:
     from globalsManager import not_classes_or_private
-except:
+except Exception:
     from .globalsManager import not_classes_or_private
 
 import logging
@@ -39,7 +39,6 @@ class GlobalsListWidget(QWidget):
             return obj.__module__ == '__main__'
         except AttributeError:
             return False
-
         '''
             not name.startswith('__') and
             not name.startswith('GL_') and
