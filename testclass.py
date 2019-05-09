@@ -1,4 +1,5 @@
 import threading
+import sys
 
 class A:
     """docstring for ClassName"""
@@ -78,4 +79,9 @@ class TestClass:
         _.timer = threading.Timer(1.0, _.run_inc)
 
     def stop(_):
+        print(_.aninteger)
         _.timer.cancel()
+
+    @classmethod
+    def out(_):
+        sys.exit(0)
